@@ -13,7 +13,8 @@ class GankItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
-class GankMeizi(scrapy.Item):
+class GankPageItem(scrapy.Item):
     title = scrapy.Field()
-    image = scrapy.Field()
-    refs = scrapy.Field()
+    images = scrapy.Field()
+    leftLink = scrapy.Field()
+    rightLink = scrapy.Field()
