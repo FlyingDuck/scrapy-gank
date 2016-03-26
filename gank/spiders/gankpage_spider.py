@@ -37,8 +37,7 @@ class GnakPageSpider(scrapy.Spider):
         pageItem = GankPageItem()
         # 页面标题
         pageTitle = tagTitle.xpath('text()').extract()[0]
-        pageItem['title'] = []
-        pageItem['title'].append(pageTitle.encode('utf-8'))
+        pageItem['title'] = pageTitle.encode('utf-8')
         # 妹纸图片
         pageItem['images'] = tagPs.xpath('./img/@src').extract()
         # 导航链接
